@@ -1,0 +1,165 @@
+/* Root styling for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Table Header Styling */
+th {
+    background-color: #2c3e50; /* Dark Blue */
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Table Body Styling */
+td {
+    background-color: #f9fafc;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    color: #34495e; /* Darker Grey-Blue */
+}
+
+/* Zebra Striping Effect */
+tr:nth-child(odd) td {
+    background-color: #ecf0f1;
+}
+
+/* Hover Effect for Rows */
+tr:hover td {
+    background-color: #e8f6ff;
+    transition: background-color 0.3s;
+}
+
+/* Buttons Styling */
+button {
+    background-color: #3498db; /* Light Blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker Blue */
+    transform: translateY(-2px);
+}
+
+/* Styling for Empty Rows */
+td[colspan="3"] {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Optional Table Borders */
+table, th, td {
+    border: 1px solid #dcdde1;
+}
+
+/* Annotation Container */
+.annotation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #f9fafb;
+    color: #2c3e50; 
+}
+
+.annotation-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #34495e; /* Darker Grey-Blue */
+}
+
+.annotation-tool-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    height: 80%;
+    max-height: 900px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.annotation-tool-wrapper > div {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.submit-button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #1abc9c; /* Teal */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #16a085; /* Darker Teal */
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: #e74c3c; /* Bright Red */
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+}
+
+.loading-message {
+    font-size: 18px;
+    text-align: center;
+    margin: 20px;
+    color: #7f8c8d; 
+}
+
+/* React Picture Annotation Overrides */
+.rp-stage {
+    position: static !important;
+}
+
+.rp-image {
+    position: static !important;
+}
+
+
+.table-wrapper{
+  display: grid;
+  place-content: center;
+}

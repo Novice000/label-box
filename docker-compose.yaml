@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Map frontend service to localhost:3000
+    volumes:
+      - ./frontend:/client # For development, to sync local changes
+    command: ["npm", "start"]
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000" # Map backend service to localhost:8000
+    volumes:
+      - ./backend:/api # For development, to sync local changes
+      - ./backend/db.sqlite3:/api/db.sqlite3 # Persist SQLite database
+    command: ["python3", "manage.py", "runserver", "0.0.0.0:8000"]

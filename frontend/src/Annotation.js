@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ReactPictureAnnotation } from "react-picture-annotation";
 import axiosInstance from "./utils/axios.config";
 import './App.css';
@@ -7,6 +7,8 @@ import './App.css';
 function Annotation() {
     const location = useLocation();
     const { data } = location.state;
+
+    const navigate = useNavigate()
 
     const [pageSize, setPageSize] = useState({
         height: window.innerHeight * 0.7, // Initial height
@@ -57,6 +59,7 @@ function Annotation() {
             const response = await axiosInstance.put(`annotate/annotations/${data.id}/`, { data: annotations });
             if (response.status === 200 || response.status === 201) {
                 alert("Annotations submitted successfully.");
+                navigate("/")
             } else {
                 alert("Failed to submit annotations.");
             }

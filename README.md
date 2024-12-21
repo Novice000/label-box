@@ -5,6 +5,24 @@ Annotate is a web-based application that provides annotation functionalities for
 
 This project contains configuration files to facilitate deployment on platforms like **Choreo**, though this README focuses on local setup and Docker deployment.
 
+## Technology Stack
+
+The **Annotate** project leverages the following technologies:
+
+#### Backend:
+- **Django**: High-level Python web framework for the backend logic.
+- **Django REST Framework (DRF)**: For building and handling API endpoints.
+- **SQLite**: Lightweight database for development.
+
+#### Frontend:
+- **React**: JavaScript library for building a dynamic and responsive user interface.
+- **Axios**: For HTTP requests between the frontend and backend.
+
+#### Deployment:
+- **Docker**: Containerization of the frontend and backend for consistent environments.
+- **Docker Compose**: To manage multi-container Docker applications.
+- **Choreo** (optional): Configurations provided for deployment and scaling.
+
 ## Project Structure
 ```
 .

@@ -1,7 +1,7 @@
 # Annotate Project
 
 ## Overview
-Annotate is a web-based application that provides annotation functionalities for managing and organizing data. It is built with a **Django** backend and a **React** frontend, designed to work seamlessly with **Docker** for streamlined development and deployment.
+Annotate is a web-based application that provides annotation functionalities for images. It is built with a **Django** backend and a **React** frontend, designed to work seamlessly with **Docker** for streamlined development and deployment. The application was made with simplicity in mind, many more features can be added as seen fit.
 
 This project contains configuration files to facilitate deployment on platforms like **Choreo**, though this README focuses on local setup and Docker deployment.
 
